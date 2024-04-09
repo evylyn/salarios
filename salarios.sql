@@ -24,6 +24,28 @@ INSERT INTO profissoes (id, nome, profissao, salario) VALUES
 (23, 'Virat Kohli', 'Jogador de futebol', 7000),
 (24, 'Priyanka Chopra', 'Atriz', 6000);
 
+--SOMA SALÁRIOS
+SELECT SUM(salario) AS SOMASAL_PROF 	
+FROM salarios
+WHERE profissao = 'professor'
+
+--MÉDIA 
+SELECT AVG(salario) AS media_salarios			
+FROM salarios										  
+WHERE profissao = 'Profissional de TI' AND 						      
+nome IN ('Lady Gaga', 'Ellen DeGeneres')
+
+--MÁXIMO
+SELECT MAX(salario) AS maior_sal_ti							 
+FROM salarios									     	   
+WHERE profissao = 'Profissional de TI' AND					 	         
+nome IN (Lady Gaga', 'Ellen DeGeneres')
+
+--MÍNIMO
+SELECT MIN(salario) AS MENOS_SALARIO
+FROM salarios
+WHERE profissao = 'Professor'; 
+
 SELECT MAX(Salario) AS MAIOR_SAL
 
 FROM Salarios
